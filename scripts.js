@@ -4,12 +4,12 @@ const perguntaInput = document.getElementById("pergunta");
 btn.onclick = function enviarPergunta() {
   const pergunta = perguntaInput.value;
 
-  fetch('https://danizele.app.n8n.cloud/webhook-test/3bc90cd5-2528-4ec1-a0be-2a01f11145b2', {
+  fetch('https://danizele.app.n8n.cloud/webhook-test/endpoint', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ mensagem: pergunta })
+    body: JSON.stringify({ mensagem: pergunta, idConversa: crypto.randomUUID() })
   })
   .then(response => response.json())
   .then(data => {

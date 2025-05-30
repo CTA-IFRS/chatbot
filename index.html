@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Chatbot CTA</title>
 </head>
 <body>
     
-    <h1>Chatbot de Desenvolvimento Acess&iacute;vel</h1>
+    <div id="main">
+        <h1>Chatbot de Desenvolvimento Acess&iacute;vel</h1>
 
-    <input type="hidden" id="idConversa" value="abc123">
-    <label for="pergunta">Digite sua pergunta:</label><br>
-    <input type="text" id="pergunta" name="pergunta" aria-label="Campo de pergunta"><br><br>
+        <label for="pergunta">Digite sua pergunta:</label><br>
+        <input type="text" id="pergunta" name="pergunta" aria-label="Campo de pergunta"><br><br>
 
-    <button id="btn">Enviar</button>
+        <button id="btn">Enviar</button>
 
-    <h2>Resposta:</h2>
-    <div id="resposta" role="region" aria-live="polite">Aguardando...</div>
+        <h2>Resposta:</h2>
+        <div>
+            <p id="resposta"></p>
+        </div>
 
-    <script src="scripts.js"></script>
+        <script src="scripts.js"></script>
+    </div>
 
 </body>
 </html>
